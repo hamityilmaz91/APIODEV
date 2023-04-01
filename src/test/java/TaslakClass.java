@@ -88,7 +88,7 @@ public class TaslakClass {
 
 
     public static void aykutMethod() {  //90-110
-
+        System.out.println("aykut01");
 
 
 
@@ -283,6 +283,7 @@ public class TaslakClass {
 
 
     }
+
 
 
 }
