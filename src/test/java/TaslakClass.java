@@ -220,6 +220,7 @@ public class TaslakClass {
     }
 
     public static void nihatMethod() { //222-242
+        System.out.println(" v nihat");
 
 
 
@@ -238,8 +239,7 @@ public class TaslakClass {
 
 
 
-
-}
+    }
     public static void omerMethod() { //243-263
 
 
