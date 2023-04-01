@@ -17,11 +17,13 @@ public class TaslakClass {
     taslak class'taki ile uyumlu olup olumadığını kontrol ediniz.
     Alan yeterli değilse alana uygun bir kod yazınız. Alanın artırılması talebinizi team lead'e iletiniz.
     --Methodunuzun içine en üst kısma medhodunuz fonksiyonu hakkında kısa öz bir açıklama yazınız.
+    -- pull yaptiktan sonra size verilen alan dogru degilse bos satir silerek yada atlayarak ilgili satira geliniz
 
     ----GitHub---
     --Master brach'ini pull ediniz.
-    --Kendi brach'iza gecip master brach'ini kendi branch'iniaza cekiniz.Git add . ve git commit -m" " yapiniz.
-    --Kendi branch'inizda calisip, kendi branch'inizi push ediniz.
+    --Kendi brach'iza gecip master brach'ini kendi branch'iniaza cekiniz.
+    --Kendi branch'inizda calisip,Git add . ve git commit -m"VersiyonAdiniz " yapiniz.
+    --Kendi branch'inizi push ediniz.
 
  */
 
@@ -49,34 +51,31 @@ public class TaslakClass {
         switch (tercih) {
 
             case "1":
-                aykutMethod();
+                aykutMethod(); //
                 break;
             case "2":
-                gulMethod();
+                gulMethod(); //
                 break;
             case "3":
-                hamitMethod();
+                hamitMethod(); //
                 break;
             case "4":
-                kubraMethod();
+                kubraMethod(); //
                 break;
             case "5":
-                mehmetMethod();
+                sevilMethod();
                 break;
             case "6":
-                mustafaMethod();
+                mustafaMethod(); //
                 break;
             case "7":
-                nihatMethod();
+                nihatMethod(); //
                 break;
             case "8":
-                omerMethod();
+                omerMethod(); //
                 break;
             case "9":
-                remziyeMethod();
-                break;
-            case "10":
-                sevilMethod();
+                remziyeMethod(); //
                 break;
             case "0":
                 break;
@@ -86,6 +85,7 @@ public class TaslakClass {
 
 
     }
+
 
     public static void aykutMethod() {  //90-110
 
@@ -175,7 +175,8 @@ public class TaslakClass {
 
     }
 
-    public static void mehmetMethod() { //178-198
+    public static void sevilMethod() { //178-198
+
 
 
 
@@ -196,7 +197,6 @@ public class TaslakClass {
 
 
     }
-
     public static void mustafaMethod() { //200-220
     //google'a gider, arama çubuğuna youtube yazar,tıklar
         chromeDriver.manage().window().maximize();
@@ -238,8 +238,8 @@ public class TaslakClass {
 
 
 
-    }
 
+}
     public static void omerMethod() { //243-263
 
 
@@ -284,28 +284,7 @@ public class TaslakClass {
 
     }
 
-    public static void sevilMethod() { //287-307
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 }
 
 
