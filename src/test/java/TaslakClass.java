@@ -221,7 +221,7 @@ public class TaslakClass {
 
     public static void nihatMethod() { //222-242
         System.out.println(" v nihat");
-
+        System.out.println(" v2");
 
 
 
