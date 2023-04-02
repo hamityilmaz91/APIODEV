@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Scanner;
 
 public class TaslakClass {
@@ -259,14 +260,25 @@ public class TaslakClass {
 
 
 
-
-
-
-
     }
 
-    public static void remziyeMethod() { //265-285
 
+
+    public static void remziyeMethod() { //265-285
+        //https://www.bestbuy.com adresine gidin.
+        chromeDriver.manage().window().maximize();
+        chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        chromeDriver.get("https://www.bestbuy.com ");
+
+        //sayfada kac adet buton bulundugunu yazdirin
+        List<WebElement> butonListesi = chromeDriver.findElements(By.tagName("button"));
+        System.out.println(butonListesi.size());//listenin size'ini aldim
+
+        //sayfa da ki herbir buton üzerinde ki yazilari yazdirin
+        for (WebElement w:butonListesi) {
+            System.out.println(w.getText());
+        }
+        chromeDriver.quit();
 
 
 
