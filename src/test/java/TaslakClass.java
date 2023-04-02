@@ -111,6 +111,8 @@ public class TaslakClass {
 
     public static void gulMethod() { //112 -132
 
+        System.out.println("gul'un kodlari");
+
 
 
 
