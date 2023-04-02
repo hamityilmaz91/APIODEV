@@ -1,6 +1,7 @@
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +33,7 @@ public class TaslakClass {
     static WebDriver chromeDriver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
 
     //static WebDriver edgeDriver =  new EdgeDriver();
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         System.out.println("QA01 SELENIM PROJE ÇALIŞMA SAYFASI");
         System.out.println("\n1- Aykut" +
@@ -199,14 +200,14 @@ public class TaslakClass {
 
 
     }
-    public static void mustafaMethod() { //200-220
-    //google'a gider, arama çubuğuna youtube yazar,tıklar
+    public static void mustafaMethod() throws InterruptedException { //200-220
+    //youtube'a gider, cookies'i geçer, ana ekrana ulaşır
         chromeDriver.manage().window().maximize();
         chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        chromeDriver.get("https://google.com/");
-        WebElement googleBar = chromeDriver.findElement(By.xpath("//input[@title='Ara']"));
-        googleBar.sendKeys("You Tube");
-        googleBar.submit();
+        chromeDriver.get("https://youtube.com/watch?v");
+        Thread.sleep(2000);
+        chromeDriver.findElement(By.xpath("(//div[@class='yt-spec-touch-feedback-shape__fill'])[12]")).click();
+
 
 
 
