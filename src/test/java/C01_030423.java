@@ -1,3 +1,12 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
+
 public class C01_030423 {
     public static void main(String[] args) {
          /*
@@ -29,27 +38,16 @@ public class C01_030423 {
     }
     public static void aykutMethod() {  //30-60
         //Amazon.com sayfasina gidiniz. Nutella aramasi yaptiriniz. Cikan sonuc sayisini konsola yazdiriniz.
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        driver.get("https://www.amazon.com/");
+        WebElement searchBox=driver.findElement(By.id("twotabsearchtextbox"));
+        searchBox.sendKeys("Nutella", Keys.ENTER);
+        WebElement sonuc= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        System.out.println("Nutella sonuc sayisi : "+sonuc.getText().split(" ")[2]);
 
 
 
