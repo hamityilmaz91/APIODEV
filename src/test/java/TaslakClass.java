@@ -158,10 +158,7 @@ public class TaslakClass {
     }
 
     public static void kubraMethod() { //156-176
-
-
-
-
+        System.out.println("Kübra");
 
 
 
