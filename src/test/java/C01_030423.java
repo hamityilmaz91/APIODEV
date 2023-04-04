@@ -185,21 +185,23 @@ public class C01_030423 {
 
     }
 
+
+
     public static void mustafaMethod() { //190-220
         //Amazon.com sayfasina gidiniz. samsung aramasi yaptiriniz. Cikan sonuc sayisini konsola yazdiriniz.
 
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
+        driver.get("https://amazon.com");
 
-
-
-
-
-
-
-
-
-
-
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Samsung", Keys.ENTER);
+        WebElement result= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        String strResutlt= result.getText().split(" ")[3];
+        System.out.println("Sonuc sayisi :  " +strResutlt);
+        driver.close();
 
 
 
