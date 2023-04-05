@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -121,34 +122,20 @@ public class C01_030423 {
 
     }
 
-    public static void kubraMethod() { //126-156
+
+    public static void kubraMethod() throws InterruptedException { //126-156
         //Amazon.com sayfasina gidiniz. laptop aramasi yaptiriniz. Cikan sonuc sayisini konsola yazdiriniz.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.get("https://amazon.com");
+        WebElement searchBox = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));
+        searchBox.sendKeys("laptop",Keys.ENTER);
+        Thread.sleep(3000);
+        String  result = driver.findElement(By.xpath("//*[text()='1-16 of over 6,000 results for']")).getText().split(" ")[3];
+        System.out.println("sonuc sayisi : "+result);
+        driver.close();
 
 
     }
