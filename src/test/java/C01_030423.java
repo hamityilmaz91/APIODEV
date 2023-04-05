@@ -33,7 +33,7 @@ public class C01_030423 {
 
 
 
-
+remziyeMethod();
 
     }
     public static void aykutMethod() {  //30-60
@@ -284,7 +284,20 @@ public class C01_030423 {
     }
 
     public static void remziyeMethod() { //286-316
-        //Amazon.com sayfasina gidiniz. mouse aramasi yaptiriniz. Cikan sonuc sayisini konsola yazdiriniz.
+        //Amazon.com sayfasina gidiniz. mouse aramasi yaptiriniz.
+        // Cikan sonuc sayisini konsola yazdiriniz.
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+        driver.get("https://www.amazon.com/");
+        WebElement searchBox=driver.findElement(By.id("twotabsearchtextbox"));
+        searchBox.sendKeys("Mouse", Keys.ENTER);
+        WebElement sonuc= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        System.out.println("Mouse sonuc sayisi : "+sonuc.getText().split(" ")[0].split("-")[1]);
+
+
 
 
 
