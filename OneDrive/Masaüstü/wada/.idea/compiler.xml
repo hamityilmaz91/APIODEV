@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="B129SeleniumMavenJunit" />
+        <module name="Batch129" />
+        <module name="Api129DT" />
+        <module name="B129SeleniumTestNG" />
+        <module name="B129Selenium" />
+        <module name="Api129NT" />
+        <module name="Hastane_Project_OOP" />
+        <module name="B129Cucumber" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Api129DT" target="11" />
+      <module name="Api129NT" target="11" />
+      <module name="B129Cucumber" target="11" />
+      <module name="B129Selenium" target="11" />
+      <module name="B129SeleniumMavenJunit" target="11" />
+      <module name="B129SeleniumTestNG" target="11" />
+      <module name="Batch129" target="11" />
+      <module name="Hastane_Project_OOP" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
